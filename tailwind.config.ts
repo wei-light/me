@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
+import { addDynamicIconSelectors } from '@iconify/tailwind'
+
 export default <Partial<Config>>{
   theme: {
     extend: {
@@ -9,4 +11,9 @@ export default <Partial<Config>>{
       },
     },
   },
+  plugins: [
+    addDynamicIconSelectors({
+      prefix: 'i',
+    }),
+  ],
 }
