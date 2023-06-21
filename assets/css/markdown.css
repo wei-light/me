@@ -1,15 +1,15 @@
 /* some custom typography style */
 
 .prose a {
-  color: rgb(128 179 151 / 0.8);
+  color: var(--md-color);
   text-decoration: none;
-  border-bottom: 1px solid rgb(128 179 151 / 0.3);
+  border-bottom: 1px dashed var(--md-color-deeper);
   transition: all linear .3s;
 }
 
 .prose a:hover {
-  color: rgb(128 179 151);
-  border-bottom: 1px solid rgb(128 179 151 / 0.6);
+  /* color: rgb(128 179 151); */
+  border-bottom: 1px solid var(--md-color-deeper);
 }
 
 /* headings style */
@@ -32,7 +32,9 @@
 .prose .footnotes {
   font-size: 12px;
   margin-top: 3.5em;
-  border-top: 1px solid var(--md-color-lighter);
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  border-top: 1px dashed var(--md-color-lighter);
   color: var(--md-color-light);
 }
 
