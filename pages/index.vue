@@ -14,7 +14,7 @@
       <BlockTitle title="博客" background-text="Blogs" />
       <PostList type="blog" class="mt-5">
         <template #default="{ list }">
-          <PostItem
+          <PostListItemSimple
             v-for="article of list"
             :key="article._path"
             :title="article.title"
@@ -33,7 +33,7 @@
       <BlockTitle title="周记" background-text="Weekly" />
       <PostList type="weekly" class="mt-5">
         <template #default="{ list }">
-          <PostItem
+          <PostListItemSimple
             v-for="article of list"
             :key="article._path"
             :title="article.title"

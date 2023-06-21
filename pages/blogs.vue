@@ -11,7 +11,7 @@
           <div v-if="!isSameGroup(article, list[idx - 1])" class="py-8 text-2xl text-gray-400">
             {{ getYear(article.date) }}
           </div>
-          <PostItemDetail
+          <PostListItemAdvanced
             class="mb-10"
             :title="article.title"
             :date="article.date"
