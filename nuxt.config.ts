@@ -12,6 +12,11 @@ export default defineNuxtConfig({
     '@/assets/css/markdown.css',
   ],
   content: {
+    highlight: {
+      theme: {
+        default: 'vitesse-light',
+      },
+    },
     markdown: {
       rehypePlugins: ['rehype-img-figure'],
     },
