@@ -44,18 +44,18 @@ watch(isLargeScreen, (newVal) => {
               <img class="h-16 w-16" src="/logo.svg" alt="logo">
             </div>
             <nav class="flex flex-col gap-1 pl-2">
-              <NuxtLink to="/" @click="showMenu = false">
+              <AppLink to="/" @click="showMenu = false">
                 HOME
-              </NuxtLink>
-              <NuxtLink to="/blogs" @click="showMenu = false">
+              </AppLink>
+              <AppLink to="/blogs" @click="showMenu = false">
                 BLOG
-              </NuxtLink>
-              <NuxtLink to="/weekly" @click="showMenu = false">
+              </AppLink>
+              <AppLink to="/weekly" @click="showMenu = false">
                 WEEKLY
-              </NuxtLink>
-              <NuxtLink to="/projects" @click="showMenu = false">
+              </AppLink>
+              <AppLink to="/projects" @click="showMenu = false">
                 PROJECT
-              </NuxtLink>
+              </AppLink>
             </nav>
           </div>
         </TransitionChild>

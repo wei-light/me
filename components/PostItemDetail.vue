@@ -16,9 +16,9 @@ defineProps<{
       <div>{{ useDateFormat(date, 'MMMM', { locales: 'en-US' }).value }}</div>
     </div>
     <div>
-      <NuxtLink :to="href" class="block text-xl mb-2 transition-colors hover:text-gray-500">
+      <AppLink :to="href" class="block text-xl mb-2 transition-colors hover:text-gray-500">
         <h2>{{ title }}</h2>
-      </NuxtLink>
+      </AppLink>
       <div class="text-sm md:hidden">
         {{ useDateFormat(date, 'MMMM D', { locales: 'en-US' }).value }}
       </div>

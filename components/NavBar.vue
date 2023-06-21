@@ -17,18 +17,18 @@ function goTop() {
       </a>
     </div>
     <nav class="hidden lg:flex lg:gap-6">
-      <NuxtLink to="/">
+      <AppLink to="/">
         HOME
-      </NuxtLink>
-      <NuxtLink to="/blogs">
+      </AppLink>
+      <AppLink to="/blogs">
         BLOG
-      </NuxtLink>
-      <NuxtLink to="/weekly">
+      </AppLink>
+      <AppLink to="/weekly">
         WEEKLY
-      </NuxtLink>
-      <NuxtLink to="/projects">
+      </AppLink>
+      <AppLink to="/projects">
         PROJECT
-      </NuxtLink>
+      </AppLink>
     </nav>
     <ToggleTheme />
   </header>
