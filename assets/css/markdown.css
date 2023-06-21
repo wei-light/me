@@ -40,6 +40,19 @@
   display: none;
 }
 
+.prose .footnotes a,
+.prose a[data-footnote-ref='true'] {
+  color: inherit;
+  font-weight: inherit;
+  border-bottom: none;
+}
+
+.prose .footnotes a:hover,
+.prose a[data-footnote-ref='true']:hover {
+  color: inherit;
+  border-bottom: none;
+}
+
 .prose a[data-footnote-ref='true']::before {
   content: '[';
 }
