@@ -3,9 +3,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
+    '@nuxt/content',
   ],
   css: [
     '@/assets/css/global.css',
     '@/assets/css/fonts.css',
+    '@/assets/css/prose.css',
+    '@/assets/css/markdown.css',
   ],
 })
