@@ -29,16 +29,11 @@ const refinedSrc = computed(() => {
 </script>
 
 <template>
-  <figure>
-    <ImageZoom
-      :src="refinedSrc"
-      :alt="alt"
-      :width="width"
-      :height="height"
-      :options="{ background: 'rgba(0, 0, 0, 0.7)' }"
-    />
-    <figcaption v-if="alt">
-      {{ alt }}
-    </figcaption>
-  </figure>
+  <ImageZoom
+    :src="refinedSrc"
+    :alt="alt"
+    :width="width"
+    :height="height"
+    :options="{ background: 'rgba(0, 0, 0, 0.7)' }"
+  />
 </template>

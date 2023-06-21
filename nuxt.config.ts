@@ -11,4 +11,9 @@ export default defineNuxtConfig({
     '@/assets/css/prose.css',
     '@/assets/css/markdown.css',
   ],
+  content: {
+    markdown: {
+      rehypePlugins: ['rehype-img-figure'],
+    },
+  },
 })
