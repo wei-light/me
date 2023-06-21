@@ -8,7 +8,6 @@
 }
 
 .prose a:hover {
-  /* color: rgb(128 179 151); */
   border-bottom: 1px solid var(--md-color-deeper);
 }
 
@@ -18,14 +17,14 @@
 .prose h4 a {
   color: inherit;
   font-weight: inherit;
-  border-bottom: 1px dashed rgb(0 0 0 / 0);
+  border-bottom: 1px dashed rgb(125, 125, 125, 0);
 }
 
 .prose h2 a:hover,
 .prose h3 a:hover,
 .prose h4 a:hover {
   color: inherit;
-  border-bottom: 1px dashed rgb(0 0 0 / 0.5);
+  border-bottom: 1px dashed rgb(125, 125, 125, 1);
 }
 
 /* footnotes style */

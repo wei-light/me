@@ -23,7 +23,7 @@
           />
         </template>
         <template #not-found>
-          <p class="text-gray-500 py-4">
+          <p class="text-gray-500 py-4 dark:text-neutral-600">
             No articles found.
           </p>
         </template>
@@ -42,7 +42,7 @@
           />
         </template>
         <template #not-found>
-          <p class="text-gray-500 py-4">
+          <p class="text-gray-500 py-4 dark:text-neutral-600">
             No articles found.
           </p>
         </template>

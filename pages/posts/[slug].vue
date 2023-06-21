@@ -55,10 +55,10 @@ onMounted(() => {
   <div ref="content">
     <ContentDoc v-slot="{ doc }">
       <div class="mb-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 dark:text-neutral-200">
           {{ doc.title }}
         </h1>
-        <div class="text-gray-500">
+        <div class="text-gray-400 dark:text-neutral-600">
           {{ useDateFormat(doc.date, 'MMM DD, YYYY', { locales: 'en-US' }).value }}
         </div>
       </div>

@@ -1,3 +1,21 @@
 body {
-  @apply text-base text-gray-700;
+  @apply text-base text-gray-700 dark:bg-neutral-900 dark:text-neutral-200;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+.dark::view-transition-old(root) {
+  z-index: 9999;
+}
+.dark::view-transition-new(root) {
+  z-index: 1;
 }

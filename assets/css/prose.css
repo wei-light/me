@@ -12,6 +12,14 @@
   color: var(--md-color);
 }
 
+html.dark .prose {
+  --md-color-lighter: #444;
+  --md-color-light: #666;
+  --md-color: #999;
+  --md-color-deep: #bbb;
+  --md-color-deeper: #ddd;
+}
+
 .prose > :first-child {
   margin-top: 0;
 }

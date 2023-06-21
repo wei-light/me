@@ -4,6 +4,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 import { addDynamicIconSelectors } from '@iconify/tailwind'
 
 export default <Partial<Config>>{
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {

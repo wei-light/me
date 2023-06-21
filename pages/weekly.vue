@@ -8,7 +8,7 @@
     <PostList type="weekly">
       <template #default="{ list }">
         <template v-for="(article, idx) of list" :key="article._path">
-          <div v-if="!isSameGroup(article, list[idx - 1])" class="py-8 text-2xl text-gray-400">
+          <div v-if="!isSameGroup(article, list[idx - 1])" class="py-8 text-2xl text-gray-400 dark:text-neutral-600">
             {{ getYear(article.date) }}
           </div>
           <PostListItemAdvanced
@@ -21,7 +21,7 @@
         </template>
       </template>
       <template #not-found>
-        <p class="text-gray-500 py-4">
+        <p class="text-gray-500 py-4 dark:text-neutral-600">
           No articles found.
         </p>
       </template>
