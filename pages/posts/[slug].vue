@@ -63,6 +63,7 @@ onMounted(() => {
         </div>
       </div>
       <ContentRenderer :value="doc" tag="article" class="prose" />
+      <OutlineItem :toc="doc.body.toc.links" :root="true" />
     </ContentDoc>
   </div>
 </template>

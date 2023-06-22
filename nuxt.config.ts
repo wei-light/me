@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     },
     markdown: {
       rehypePlugins: ['rehype-img-figure'],
+      toc: {
+        depth: 4,
+      },
     },
   },
 })
