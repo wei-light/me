@@ -18,13 +18,13 @@ defineProps<{
           <div>{{ useDateFormat(article.date, 'MMMM', { locales: 'en-US' }).value }}</div>
         </div>
         <div>
-          <AppLink :to="article._path" class="block text-xl mb-2 transition-colors hover:text-gray-500 dark:hover:text-neutral-400">
+          <AppLink :to="article._path" class="block text-xl mb-1.5 transition-colors hover:text-gray-500 dark:hover:text-neutral-400">
             <h2>{{ article.title }}</h2>
           </AppLink>
-          <div class="text-sm md:hidden">
+          <div class="text-sm text-gray-600 md:hidden dark:text-neutral-400">
             {{ useDateFormat(article.date, 'MMMM D', { locales: 'en-US' }).value }}
           </div>
-          <div class="mt-3 text-gray-500 line-clamp-2 dark:text-neutral-500">
+          <div class="mt-2.5 text-gray-500 line-clamp-2 dark:text-neutral-500">
             {{ article.description }}
           </div>
         </div>
