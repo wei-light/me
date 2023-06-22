@@ -4,6 +4,9 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 import { addDynamicIconSelectors } from '@iconify/tailwind'
 
 export default <Partial<Config>>{
+  content: [
+    'content/**/*.md',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
