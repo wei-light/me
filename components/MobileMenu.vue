@@ -3,6 +3,7 @@ import { useDark, useMediaQuery } from '@vueuse/core'
 import { TransitionChild, TransitionRoot } from '@headlessui/vue'
 
 const isDark = useDark()
+const isLocked = useLockBodyScroll()
 
 const showMenu = ref(false)
 
@@ -11,6 +12,10 @@ watch(isLargeScreen, (newVal) => {
   if (newVal === true) {
     showMenu.value = false
   }
+})
+
+watch(showMenu, (newVal) => {
+  isLocked.value = newVal
 })
 </script>
 
