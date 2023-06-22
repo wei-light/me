@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    Projects
+    <BlockTitle title="项目" background-text="Projects" />
   </div>
 </template>
 
