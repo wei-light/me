@@ -1,6 +1,7 @@
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import type { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types'
 
-export interface CustomParsedContent extends ParsedContent {
+export interface CustomMarkdownParsedContent extends MarkdownParsedContent {
   date: Date | string
+  draft?: boolean
   type?: 'blog' | 'weekly'
 }
