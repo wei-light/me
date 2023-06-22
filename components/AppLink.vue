@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const props = defineProps<{
-  to: string
+  to?: string
 }>()
 
-const isInternalLink = computed(() => props.to.startsWith('/'))
-const isExternalLink = computed(() => props.to.startsWith('http'))
+const isInternalLink = computed(() => props.to && props.to.startsWith('/'))
+const isExternalLink = computed(() => props.to && props.to.startsWith('http'))
 </script>
 
 <template>
