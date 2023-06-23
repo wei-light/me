@@ -1,5 +1,10 @@
 <script setup lang="ts">
-
+useSeoMeta({
+  title: 'About me - Bright',
+  ogTitle: 'About me - Bright',
+  description: 'Bright\'s Profile',
+  ogDescription: 'Bright\'s Profile',
+})
 </script>
 
 <template>
@@ -7,7 +12,7 @@
     <div>
       <BlockTitle title="关于我" background-text="About" />
       <article class="prose">
-        <ContentDoc path="/about" />
+        <ContentDoc path="/about" :head="false" />
       </article>
     </div>
     <div>
