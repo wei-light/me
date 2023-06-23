@@ -16,6 +16,7 @@ html.dark {
 
 body {
   @apply text-base text-gray-700 dark:bg-neutral-900 dark:text-neutral-200;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::-webkit-scrollbar {

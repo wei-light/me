@@ -143,7 +143,7 @@ html.dark .prose {
   margin-top: 1.6em;
   margin-bottom: 1.6em;
   border-left-width: 0.25em;
-  border-left-color: rgba(125,125,125,0.3);
+  border-left-color: rgba(125, 125, 125, 0.25);
   quotes: "\201C""\201D""\2018""\2019";
 }
 
@@ -195,7 +195,7 @@ html.dark .prose {
 
 .prose code {
   padding: 0.2em 0.4em;
-  background-color: rgba(125, 125, 125, 0.2);
+  background-color: rgba(125, 125, 125, 0.15);
   font-size: 0.875em;
   border-radius: 6px;
 }
