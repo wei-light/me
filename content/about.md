@@ -1,3 +1,8 @@
+---
+title: About me - Bright
+description: Bright's Profile
+---
+
 Hi！我是 Bright 👋。是前端开发工程师，目前正在求职中。本博客网站主要用于记录我的生活和对一些技术的理解。
 
 你可以通过以下方式找到我（靠前的较为活跃）
