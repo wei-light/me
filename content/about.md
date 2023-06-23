@@ -19,8 +19,5 @@ list:
   - name: 掘金
     icon: i-[tabler--brand-juejin]
     href: https://juejin.cn/user/2181890150240030
-  - name: 语雀
-    icon: i-[ant-design--yuque-filled]
-    href: https://www.yuque.com/light-ofcnp
 ---
 ::
