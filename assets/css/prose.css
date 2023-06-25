@@ -222,7 +222,7 @@ html.dark .prose {
 
 .prose pre {
   color: var(--md-color-deep);
-  background-color: rgba(125, 125, 125, 0.1);
+  background-color: rgba(125, 125, 125, 0.08);
   overflow-x: auto;
   font-weight: 400;
   font-size: 0.875em;

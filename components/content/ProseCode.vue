@@ -55,7 +55,7 @@ export default defineComponent({
     <slot />
     <button
       :title="copied ? 'Copied' : 'Copy'"
-      class="inline-flex transition-opacity absolute top-3 right-3 opacity-0 text-lg group-hover:opacity-40"
+      class="inline-flex transition-opacity absolute top-3 right-3 opacity-0 text-lg group-hover:opacity-30"
       @click="onCopy"
     >
       <i v-show="!copied" class="i-[ri--clipboard-line]" />
