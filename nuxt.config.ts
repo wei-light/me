@@ -5,6 +5,13 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
   ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'zh-CN',
+      },
+    },
+  },
   css: [
     '@/assets/css/global.css',
     '@/assets/css/fonts.css',

@@ -16,10 +16,10 @@ function goTop() {
   <header class="flex justify-between items-center h-16 px-6 lg:px-8">
     <div class="flex items-center">
       <MobileMenu />
-      <a class="w-14 h-14 cursor-pointer lg:fixed" @click="goTop">
+      <div role="button" class="w-14 h-14 cursor-pointer lg:fixed" @click="goTop">
         <img v-show="!isDark" src="/logo.svg" alt="logo">
         <img v-show="isDark" src="/logo-dark.svg" alt="logo">
-      </a>
+      </div>
     </div>
     <nav class="hidden lg:flex lg:gap-6">
       <AppLink to="/">

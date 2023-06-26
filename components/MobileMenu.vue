@@ -21,6 +21,7 @@ watch(showMenu, (newVal) => {
 
 <template>
   <button
+    aria-label="Toggle Moblie Menu"
     class="inline-flex items-center justify-center bg-emerald-300/20 h-8 w-8 mr-5 rounded-lg transition-colors lg:hidden hover:bg-emerald-300/30 dark:bg-emerald-600/20 dark:hover:bg-emerald-600/30"
     @click="showMenu = !showMenu"
   >
@@ -29,7 +30,7 @@ watch(showMenu, (newVal) => {
   <!-- SideBar -->
   <ClientOnly>
     <Teleport to="#portal">
-      <TransitionRoot :show="showMenu">
+      <TransitionRoot :show="showMenu" as="aside">
         <TransitionChild
           as="template"
           enter="transition-opacity ease-linear duration-300"
