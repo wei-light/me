@@ -30,7 +30,7 @@ watch(showMenu, (newVal) => {
   <!-- SideBar -->
   <ClientOnly>
     <Teleport to="#portal">
-      <TransitionRoot :show="showMenu" as="aside">
+      <TransitionRoot :show="showMenu">
         <TransitionChild
           as="template"
           enter="transition-opacity ease-linear duration-300"
@@ -38,7 +38,7 @@ watch(showMenu, (newVal) => {
           leave="transition-opacity ease-linear duration-300"
           leave-to="opacity-0"
         >
-          <div class="fixed inset-0 bg-black/20 z-40 dark:bg-black/70" @click="showMenu = false" />
+          <div class="fixed inset-0 bg-white/70 z-40 dark:bg-black/70" @click="showMenu = false" />
         </TransitionChild>
         <TransitionChild
           as="template"
@@ -47,7 +47,7 @@ watch(showMenu, (newVal) => {
           leave="transition ease-in-out duration-300 transform"
           leave-to="-translate-x-full"
         >
-          <div class="fixed left-0 inset-y-0 w-64 bg-white p-1 z-50 dark:bg-neutral-900">
+          <aside class="fixed left-0 inset-y-0 w-64 bg-white p-1 shadow-[0_0_8px_#00000015] z-50 dark:bg-neutral-900 dark:shadow-[0_0_8px_#ffffff15]">
             <div class="flex justify-center">
               <img v-show="!isDark" class="h-16 w-16" src="/logo.svg" alt="logo">
               <img v-show="isDark" class="h-16 w-16" src="/logo-dark.svg" alt="logo">
@@ -66,7 +66,7 @@ watch(showMenu, (newVal) => {
                 PROJECT
               </AppLink>
             </nav>
-          </div>
+          </aside>
         </TransitionChild>
       </TransitionRoot>
     </Teleport>
