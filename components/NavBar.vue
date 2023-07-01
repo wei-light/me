@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { useDark } from '@vueuse/core'
-
-const isDark = useDark()
-
 function goTop() {
   window.scrollTo({
     top: 0,
@@ -17,8 +13,7 @@ function goTop() {
     <div class="flex items-center">
       <MobileMenu />
       <div role="button" class="w-14 h-14 cursor-pointer lg:fixed" @click="goTop">
-        <img v-show="!isDark" src="/logo.svg" alt="logo">
-        <img v-show="isDark" src="/logo-dark.svg" alt="logo">
+        <AppImg :image="{ light: '/logo.svg', dark: '/logo-dark.svg', alt: 'logo' }" />
       </div>
     </div>
     <nav class="hidden lg:flex lg:gap-6">

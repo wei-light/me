@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { useDark, useMediaQuery } from '@vueuse/core'
-import { TransitionChild, TransitionRoot } from '@headlessui/vue'
-
-const isDark = useDark()
 const isLocked = useLockBodyScroll()
 
 const showMenu = ref(false)
@@ -12,10 +8,6 @@ watch(isLargeScreen, (newVal) => {
   if (newVal === true) {
     showMenu.value = false
   }
-})
-
-watch(showMenu, (newVal) => {
-  isLocked.value = newVal
 })
 </script>
 
@@ -30,27 +22,17 @@ watch(showMenu, (newVal) => {
   <!-- SideBar -->
   <ClientOnly>
     <Teleport to="#portal">
-      <TransitionRoot :show="showMenu">
-        <TransitionChild
-          as="template"
-          enter="transition-opacity ease-linear duration-300"
-          enter-from="opacity-0"
-          leave="transition-opacity ease-linear duration-300"
-          leave-to="opacity-0"
-        >
-          <div class="fixed inset-0 bg-white/70 z-40 dark:bg-black/70" @click="showMenu = false" />
-        </TransitionChild>
-        <TransitionChild
-          as="template"
-          enter="transition ease-in-out duration-300 transform"
-          enter-from="-translate-x-full"
-          leave="transition ease-in-out duration-300 transform"
-          leave-to="-translate-x-full"
-        >
-          <aside class="fixed left-0 inset-y-0 w-64 bg-white p-1 shadow-[0_0_8px_#00000015] z-50 dark:bg-neutral-900 dark:shadow-[0_0_8px_#ffffff15]">
+      <Transition
+        name="multi"
+        :duration="300"
+        @enter="isLocked = true"
+        @after-leave="isLocked = false"
+      >
+        <div v-if="showMenu">
+          <div class="mask" @click="showMenu = false" />
+          <aside class="sidebar">
             <div class="flex justify-center">
-              <img v-show="!isDark" class="h-16 w-16" src="/logo.svg" alt="logo">
-              <img v-show="isDark" class="h-16 w-16" src="/logo-dark.svg" alt="logo">
+              <AppImg :image="{ light: '/logo.svg', dark: '/logo-dark.svg', alt: 'logo' }" height="64" width="64" />
             </div>
             <nav class="flex flex-col gap-1 pl-2">
               <AppLink to="/" @click="showMenu = false">
@@ -67,13 +49,41 @@ watch(showMenu, (newVal) => {
               </AppLink>
             </nav>
           </aside>
-        </TransitionChild>
-      </TransitionRoot>
+        </div>
+      </Transition>
     </Teleport>
   </ClientOnly>
 </template>
 
 <style scoped>
+.mask {
+  @apply fixed inset-0 bg-white/70 z-40 dark:bg-black/70;
+}
+
+.sidebar {
+  @apply fixed left-0 inset-y-0 w-64 bg-white p-1 shadow-[0_0_8px_#00000015] z-50 dark:bg-neutral-900 dark:shadow-[0_0_8px_#ffffff15];
+}
+
+.multi-enter-active .mask,
+.multi-leave-active .mask {
+  transition: opacity 0.3s linear;
+}
+
+.multi-enter-from .mask,
+.multi-leave-to .mask {
+  opacity: 0;
+}
+
+.multi-enter-active .sidebar,
+.multi-leave-active .sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.multi-enter-from .sidebar,
+.multi-leave-to .sidebar {
+  transform: translateX(-100%);
+}
+
 nav a {
   @apply relative px-3 py-2 text-sm font-medium text-gray-700/70 rounded transition-colors hover:bg-gray-100 dark:text-neutral-200/70 dark:hover:bg-neutral-800;
 }
