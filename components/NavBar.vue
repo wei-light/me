@@ -12,8 +12,8 @@ function goTop() {
   <header class="flex justify-between items-center h-16 px-6 lg:px-8">
     <div class="flex items-center">
       <MobileMenu />
-      <div role="button" class="w-14 h-14 cursor-pointer lg:fixed" @click="goTop">
-        <AppImg :image="{ light: '/logo.svg', dark: '/logo-dark.svg', alt: 'logo' }" />
+      <div role="button" class="cursor-pointer lg:fixed" @click="goTop">
+        <AppImg height="56" width="56" :image="{ light: '/logo.svg', dark: '/logo-dark.svg', alt: 'logo' }" />
       </div>
     </div>
     <nav class="hidden lg:flex lg:gap-6">
