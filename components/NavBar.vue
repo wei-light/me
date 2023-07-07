@@ -13,7 +13,7 @@ function goTop() {
     <div class="flex items-center">
       <MobileMenu />
       <div role="button" class="cursor-pointer lg:fixed" @click="goTop">
-        <AppImg height="56" width="56" :image="{ light: '/logo.svg', dark: '/logo-dark.svg', alt: 'logo' }" />
+        <ThemeImg height="56" width="56" :image="{ light: '/logo.svg', dark: '/logo-dark.svg', alt: 'logo' }" />
       </div>
     </div>
     <nav class="hidden lg:flex lg:gap-6">

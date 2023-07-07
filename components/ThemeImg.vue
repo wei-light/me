@@ -22,7 +22,7 @@ defineOptions({
       :alt="alt ?? (typeof image === 'string' ? '' : image.alt || '')"
     >
     <template v-else>
-      <AppImg
+      <ThemeImg
         class="image-dark"
         :image="image.dark"
         :alt="
@@ -32,7 +32,7 @@ defineOptions({
         "
         v-bind="$attrs"
       />
-      <AppImg
+      <ThemeImg
         class="image-light"
         :image="image.light"
         :alt="

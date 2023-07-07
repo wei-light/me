@@ -32,7 +32,7 @@ watch(isLargeScreen, (newVal) => {
           <div class="mask" @click="showMenu = false" />
           <aside class="sidebar">
             <div class="flex justify-center">
-              <AppImg :image="{ light: '/logo.svg', dark: '/logo-dark.svg', alt: 'logo' }" height="64" width="64" />
+              <ThemeImg :image="{ light: '/logo.svg', dark: '/logo-dark.svg', alt: 'logo' }" height="64" width="64" />
             </div>
             <nav class="flex flex-col gap-1 pl-2">
               <AppLink to="/" @click="showMenu = false">
