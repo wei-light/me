@@ -11,6 +11,11 @@
   border-bottom: 1px solid var(--md-color-deeper);
 }
 
+.prose hr {
+  width: 100px;
+  margin: 3em auto;
+}
+
 /* headings style */
 .prose h2 a,
 .prose h3 a,
