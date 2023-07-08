@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { withBase } from 'ufo'
-import { computed, useRuntimeConfig } from '#imports'
+// import { withBase } from 'ufo'
+// import { computed, useRuntimeConfig } from '#imports'
 
 const props = defineProps({
   src: {
@@ -20,20 +20,42 @@ const props = defineProps({
     default: undefined,
   },
 })
-const refinedSrc = computed(() => {
-  if (props.src?.startsWith('/') && !props.src.startsWith('//')) {
-    return withBase(props.src, useRuntimeConfig().app.baseURL)
-  }
-  return props.src
-})
+// const refinedSrc = computed(() => {
+//   if (props.src?.startsWith('/') && !props.src.startsWith('//')) {
+//     return withBase(props.src, useRuntimeConfig().app.baseURL)
+//   }
+//   return props.src
+// })
+
+// const mounted = ref(false)
+
+// onMounted(() => {
+//   mounted.value = true
+// })
+
+const priority = ref<string>()
+const fallback = ref<string>()
+
+watchEffect(() => [priority.value, fallback.value] = props.src.split('#'))
+
+// function handleError() {
+//   priority.value = undefined
+// }
+
+// const imgUrl = computed(() => {
+//   if (!mounted.value) return undefined
+
+//   return priority.value ?? fallback.value
+// })
 </script>
 
 <template>
-  <ImageZoom
-    :src="refinedSrc"
+  <AppImg
+    :src="priority"
+    :fallback="fallback"
     :alt="alt"
     :width="width"
     :height="height"
-    :options="{ background: 'rgba(0, 0, 0, 0.7)' }"
+    loading="lazy"
   />
 </template>
