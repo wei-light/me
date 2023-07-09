@@ -19,6 +19,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+img[src=""], img:not([src]) {
+  opacity: 0;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

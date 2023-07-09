@@ -27,35 +27,54 @@ const props = defineProps({
 //   return props.src
 // })
 
-// const mounted = ref(false)
-
-// onMounted(() => {
-//   mounted.value = true
-// })
-
+const mounted = ref(false)
+const isLoading = ref(true)
 const priority = ref<string>()
 const fallback = ref<string>()
 
+const imgUrl = computed(() => {
+  if (!mounted.value) return undefined
+
+  return priority.value ?? fallback.value
+})
+
 watchEffect(() => [priority.value, fallback.value] = props.src.split('#'))
 
-// function handleError() {
-//   priority.value = undefined
-// }
+function handleError() {
+  priority.value = undefined
+}
 
-// const imgUrl = computed(() => {
-//   if (!mounted.value) return undefined
+function handleLoad() {
+  isLoading.value = false
+}
 
-//   return priority.value ?? fallback.value
-// })
+onMounted(() => {
+  mounted.value = true
+})
 </script>
 
 <template>
-  <AppImg
-    :src="priority"
-    :fallback="fallback"
-    :alt="alt"
-    :width="width"
-    :height="height"
-    loading="lazy"
-  />
+  <div class="img-container">
+    <div v-if="isLoading" class="skeleton-loading-bg rounded" :class="[width && height ? 'absolute inset-0' : 'aspect-[2/1]']" />
+    <img
+      :src="imgUrl"
+      :alt="alt"
+      :height="height"
+      :width="width"
+      loading="lazy"
+      @load="handleLoad"
+      @error="handleError"
+    >
+  </div>
 </template>
+
+<style scoped>
+.img-container {
+  position: relative;
+}
+
+.img-container > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+</style>
