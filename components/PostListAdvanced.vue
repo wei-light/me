@@ -24,7 +24,7 @@ defineProps<{
           <div class="text-sm opacity-50 md:hidden">
             {{ useDateFormat(article.date, 'MMMM D', { locales: 'en-US' }).value }}
           </div>
-          <div class="pt-1.5 opacity-60 line-clamp-2">
+          <div class="pt-1.5 text-sm opacity-60 line-clamp-2">
             {{ article.description }}
           </div>
         </div>

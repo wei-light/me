@@ -13,6 +13,6 @@
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-  transform: translateY(150px);
+  transform: translateY(0.5rem);
 }
 </style>
