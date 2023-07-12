@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { Zoom } from 'medium-zoom'
-import mediumZoom from 'medium-zoom'
-
 const router = useRouter()
 
 const content = ref<HTMLDivElement>()
@@ -51,18 +48,6 @@ onMounted(() => {
   useEventListener(content.value!, 'click', handleAnchors, { passive: false })
 
   setTimeout(navigate, 500)
-})
-
-const zoom = shallowRef<Zoom | null>(null)
-
-onMounted(() => {
-  zoom.value = mediumZoom('.prose img', {
-    background: 'rgba(0, 0, 0, 0.7)',
-  })
-})
-
-onUnmounted(() => {
-  zoom.value?.detach()
 })
 </script>
 

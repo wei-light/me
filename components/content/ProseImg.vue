@@ -56,15 +56,16 @@ onMounted(() => {
 <template>
   <div class="img-container">
     <div v-if="isLoading" class="skeleton-loading-bg rounded" :class="[width && height ? 'absolute inset-0' : 'aspect-[2/1]']" />
-    <img
+    <ImageZoom
       :src="imgUrl"
       :alt="alt"
       :height="height"
       :width="width"
+      :options="{ background: 'rgba(0, 0, 0, 0.7)' }"
       loading="lazy"
       @load="handleLoad"
       @error="handleError"
-    >
+    />
   </div>
 </template>
 
