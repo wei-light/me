@@ -12,7 +12,7 @@ defineProps<{
       v-for="doc of docs"
       :key="doc.name"
       :to="doc.href"
-      class="relative overflow-hidden bg-neutral-100 border border-neutral-200 rounded-md transition-transform hover:-translate-y-1 dark:bg-neutral-800 dark:border-neutral-700"
+      class="relative overflow-hidden bg-gray-100/70 border border-gray-200/50 rounded-md transition-transform hover:-translate-y-1 dark:bg-neutral-800/70 dark:border-neutral-700/50"
     >
       <div class="h-40 pl-4 pt-4">
         <span class="font-bold text-sm text-neutral-600 dark:text-neutral-300">{{ doc.name }}</span>
