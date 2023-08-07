@@ -29,6 +29,9 @@ function goTop() {
       <AppLink to="/projects">
         PROJECT
       </AppLink>
+      <AppLink to="/docs">
+        DOC
+      </AppLink>
     </nav>
     <ToggleTheme />
   </header>

@@ -5,3 +5,9 @@ export interface CustomMarkdownParsedContent extends MarkdownParsedContent {
   draft?: boolean
   type?: 'blog' | 'weekly'
 }
+
+export interface DocMeta {
+  name: string
+  href: string
+  cover: string
+}

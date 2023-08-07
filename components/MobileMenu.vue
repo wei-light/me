@@ -47,6 +47,9 @@ watch(isLargeScreen, (newVal) => {
               <AppLink to="/projects" @click="showMenu = false">
                 PROJECT
               </AppLink>
+              <AppLink to="/docs" @click="showMenu = false">
+                DOC
+              </AppLink>
             </nav>
           </aside>
         </div>
