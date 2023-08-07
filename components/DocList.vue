@@ -48,6 +48,5 @@ html.dark .cover::after {
   position: absolute;
   inset: 0;
   background: rgb(0, 0, 0, 0.3);
-  z-index: 99;
 }
 </style>
