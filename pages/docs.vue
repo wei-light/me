@@ -1,8 +1,13 @@
 <script setup lang="ts">
 import type { DocMeta } from '~/type'
 
+useSeoMeta({
+  title: 'Doc - Bright',
+  ogTitle: 'Doc - Bright',
+})
+
 const docs = [
-  { name: '事业单位', href: 'https://www.craft.me/s/GUfNHjWSisGoJP', cover: '/doc-cover/sydw.png' },
+  { name: '前端资源汇总', href: 'https://www.craft.me/s/yFWYa4X7WTVpEJ', cover: '/doc-cover/frontend-resource.png' },
 ] satisfies DocMeta[]
 </script>
 

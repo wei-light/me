@@ -12,12 +12,13 @@ defineProps<{
       v-for="doc of docs"
       :key="doc.name"
       :to="doc.href"
-      class="relative overflow-hidden bg-gray-100/70 border border-gray-200/50 rounded-md transition-transform hover:-translate-y-1 dark:bg-neutral-800/70 dark:border-neutral-700/50"
+      class="relative overflow-hidden bg-gray-100/70 border border-gray-200/50 rounded-md transition-transform z-10 hover:-translate-y-1 dark:bg-neutral-800/70 dark:border-neutral-700/50"
     >
+      <div class="absolute inset-0 -z-10 blur-2xl scale-[3] opacity-10" :style="{ backgroundImage: `url(${doc.cover})`, backgroundSize: 'cover' }" />
       <div class="h-40 pl-4 pt-4">
         <span class="font-bold text-sm text-neutral-600 dark:text-neutral-300">{{ doc.name }}</span>
-        <div class="cover">
-          <img class="w-full h-full object-cover" :src="doc.cover">
+        <div class="cover bg-white dark:bg-neutral-800">
+          <img class="w-full h-full object-cover rounded-tl" :src="doc.cover">
         </div>
       </div>
     </AppLink>
@@ -41,6 +42,8 @@ defineProps<{
   height: calc(100% - 3.5rem);
   border-top-left-radius: 0.375rem;
   box-shadow: 0 16px 40px rgba(125, 125, 125, 0.3);
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 html.dark .cover::after {
