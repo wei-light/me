@@ -12,15 +12,15 @@ defineProps<{
       v-for="doc of docs"
       :key="doc.name"
       :to="doc.href"
-      class="relative overflow-hidden bg-gray-100/70 border border-gray-200/50 rounded-md transition-transform z-10 hover:-translate-y-1 dark:bg-neutral-800/70 dark:border-neutral-700/50"
+      class="relative overflow-hidden h-40 p-4 bg-gray-100/70 border border-gray-200/50 rounded-md transition-transform group hover:-translate-y-1 dark:bg-neutral-800/70 dark:border-neutral-700/50"
     >
-      <div class="absolute inset-0 -z-10 blur-2xl scale-[3] opacity-10" :style="{ backgroundImage: `url(${doc.cover})`, backgroundSize: 'cover' }" />
-      <div class="h-40 pl-4 pt-4">
-        <span class="font-bold text-sm text-neutral-600 dark:text-neutral-300">{{ doc.name }}</span>
-        <div class="cover bg-white dark:bg-neutral-800">
-          <img class="w-full h-full object-cover rounded-tl" :src="doc.cover">
-        </div>
-      </div>
+      <p class="font-bold text-sm opacity-95">
+        {{ doc.name }}
+      </p>
+      <p class="mt-2 text-xs leading-5 line-clamp-2 opacity-60 group-hover:line-clamp-none">
+        {{ doc.desc }}
+      </p>
+      <i :class="doc.icon" class="absolute -bottom-6 right-0 opacity-5 w-24 h-24" />
     </AppLink>
   </div>
 </template>
@@ -29,27 +29,7 @@ defineProps<{
 .grid-box {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: 1.5rem;
-}
-
-.cover {
-  overflow: hidden;
-  position: absolute;
-  left: 2.5rem;
-  top: 3.5rem;
-  width: calc(100% - 2.5rem);
-  height: calc(100% - 3.5rem);
-  border-top-left-radius: 0.375rem;
-  box-shadow: 0 16px 40px rgba(125, 125, 125, 0.3);
-  padding-left: 20px;
-  padding-top: 20px;
-}
-
-html.dark .cover::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgb(0, 0, 0, 0.3);
 }
 </style>

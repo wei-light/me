@@ -8,6 +8,7 @@ export interface CustomMarkdownParsedContent extends MarkdownParsedContent {
 
 export interface DocMeta {
   name: string
+  desc: string
   href: string
-  cover: string
+  icon: string
 }
