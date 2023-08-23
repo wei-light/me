@@ -1,13 +1,13 @@
 import type { CustomMarkdownParsedContent } from '@/type'
 
-export function filterAndSort(list: CustomMarkdownParsedContent[], type: 'blog' | 'weekly') {
+export function filterAndSort(list: CustomMarkdownParsedContent[], type: 'blog' | 'note') {
   let filterList: CustomMarkdownParsedContent[]
 
   if (type === 'blog') {
     filterList = list.filter(item => item.type === 'blog' || !item.type)
   }
   else {
-    filterList = list.filter(item => item.type === 'weekly')
+    filterList = list.filter(item => item.type === 'note')
   }
 
   return filterList.filter(item => !item.draft).sort((a, b) => a.date < b.date ? 1 : -1)

@@ -23,8 +23,8 @@ function goTop() {
       <AppLink to="/blogs">
         BLOG
       </AppLink>
-      <AppLink to="/weekly">
-        WEEKLY
+      <AppLink to="/notes">
+        NOTE
       </AppLink>
       <AppLink to="/projects">
         PROJECT

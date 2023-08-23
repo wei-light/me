@@ -41,8 +41,8 @@ watch(isLargeScreen, (newVal) => {
               <AppLink to="/blogs" @click="showMenu = false">
                 BLOG
               </AppLink>
-              <AppLink to="/weekly" @click="showMenu = false">
-                WEEKLY
+              <AppLink to="/notes" @click="showMenu = false">
+                NOTE
               </AppLink>
               <AppLink to="/projects" @click="showMenu = false">
                 PROJECT

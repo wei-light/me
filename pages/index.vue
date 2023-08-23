@@ -20,8 +20,8 @@ useSeoMeta({
       <PostListSimple type="blog" />
     </div>
     <div>
-      <BlockTitle title="周记" background-text="Weekly" />
-      <PostListSimple type="weekly" />
+      <BlockTitle title="小记" background-text="Notes" />
+      <PostListSimple type="note" />
     </div>
   </div>
 </template>

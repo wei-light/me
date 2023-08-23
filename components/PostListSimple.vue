@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  type: 'blog' | 'weekly'
+  type: 'blog' | 'note'
 }>()
 </script>
 
